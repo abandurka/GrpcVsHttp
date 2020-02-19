@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using GrpcVsHttp.Services;
+﻿using GrpcVsHttp.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 
 namespace GrpcVsHttp.Controllers
 {
@@ -17,7 +16,7 @@ namespace GrpcVsHttp.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get() => 
+        public IEnumerable<WeatherForecast> Get() =>
             _forecastService.GetForecast();
     }
 }
